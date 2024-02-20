@@ -21,7 +21,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.bongjulio = import ./Modules/Nixos/home.nix;
+              home-manager.users.bongjulio = import ./Modules/NixOS/home.nix;
               home-manager.extraSpecialArgs = specialArgs;
             }
           ];

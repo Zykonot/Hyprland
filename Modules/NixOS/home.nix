@@ -32,13 +32,13 @@
 
   # The home.packages option allows you to install Nix packages into your environment.
   home.packages = [
-     alacritty
-     rofi-wayland
-     waybar
-     pavucontrol
-     grimblast
-     wdisplays
-     lf
+     pkgs.alacritty
+     pkgs.rofi-wayland
+     pkgs.waybar
+     pkgs.pavucontrol
+     pkgs.grimblast
+     pkgs.wdisplays
+     pkgs.lf
   ];
 
   # Home Manager can also manage your environment variables through
@@ -58,22 +58,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # Enable ZSH/Oh-My-ZSH with plugins
-  programs.zsh = {
-    enable = true;
-    shellAliases = {
-      ll = "ls -l";
-      update = "sudo nixos-rebuild switch";
-    };
-
-    histSize = 10000;
-    histFile = "${config.xdg.dataHome}/zsh/history";
-
-  oh-my-zsh = {
-     enable = true;
-     plugins = [ "git" "thefuck" ];
-     theme = "robbyrussell";
-   };
- };
 }
