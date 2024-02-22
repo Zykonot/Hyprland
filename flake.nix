@@ -15,13 +15,13 @@
         hackbook = nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           modules = [
-            ./Modules/NixOS/configuration.nix
+            ./modules/configuration.nix
             home-manager.nixosModules.home-manager
 
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.bongjulio = import ./Modules/NixOS/home.nix;
+              home-manager.users.bongjulio = import ./modules/home.nix;
               home-manager.extraSpecialArgs = specialArgs;
             }
           ];
@@ -32,7 +32,7 @@
         "bongjulio@hackbook" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           modules = [
-            ./Modules/NixOS/home.nix
+            ./modules/home.nix
           ];
         };
       };
