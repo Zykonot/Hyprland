@@ -1,1 +1,1 @@
-# Heres a vanilla Hyprland template for all your ricing needs!
+# A vanilla Hyprland template for all your ricing needs!
